@@ -9,7 +9,7 @@ import Stats from "./components/Stats";
 import Chart from "./components/Chart";
 
 function App() {
-  const BASE_URL = "http://localhost:5000";
+  const BASE_URL = "https://codementor-weather-app-api.herokuapp.com";
 
   const [weatherData, setWeatherData] = useState("");
   const [cityName, setCityName] = useState("");

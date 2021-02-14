@@ -23,7 +23,6 @@
     "react-scripts": "4.0.1",
     "react-toastify": "^7.0.3",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.2",
-    "weather-icons-react": "^1.2.0",
     "web-vitals": "^0.2.4"
   },
   "scripts": {
@@ -50,9 +49,9 @@
       "last 1 safari version"
     ]
   },
-  "description": "This is a simple React and Tailwind base.",
+  "description": "Simple weather forecast app based on a Codementor project.",
   "main": "craco.config.js",
   "devDependencies": {},
-  "author": "",
+  "author": "Arthur Penteado",
   "license": "ISC"
 }
