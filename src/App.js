@@ -7,6 +7,7 @@ import axios from "axios";
 import Header from "./components/Header";
 import Stats from "./components/Stats";
 import Chart from "./components/Chart";
+import ForecastStats from "./components/ForecastStats";
 
 function App() {
   const BASE_URL = "https://codementor-weather-app-api.herokuapp.com";
@@ -104,23 +105,30 @@ function App() {
   return (
     <>
       <ToastContainer />
-      <div className="flex justify-center items-center w-screen h-screen bg-gray-100">
-        <div className="bg-blue-300 w-11/12 sm:w-4/5 xl:w-3/5 p-4 rounded-lg">
+      <div className="flex justify-center items-center w-screen sm:h-screen mt-4 sm:mt-0 bg-gray-100">
+        <div className="bg-blue-300 w-11/12 sm:w-4/5 xl:w-3/5 p-2 sm:p-4 rounded-lg">
           <div className="bg-white p-3 rounded text-gray-500">
             <h1 className="text-2xl text-center font-bold mb-6 text-blue-700">Weather Forescast</h1>
             <Header getDataWithName={getDataWithName} cityName={cityName} setCityName={setCityName} />
             {weatherData ? (
-              <div className="flex flex-wrap sm:flex-nowrap justify-between my-4">
-                <div className="w-full mb-4 sm:mb-0">
-                  <Stats weatherData={weatherData} />
+              <div>
+                <div className="flex flex-wrap sm:flex-nowrap justify-between my-4">
+                  <div className="w-full mb-4 sm:mb-0">
+                    <Stats weatherData={weatherData} />
+                  </div>
+                  <div className="w-full sm:max-w-1/2">
+                    <p className="mb-4 text-center font-bold">Temperature - Next 6 days (Celsius)</p>
+                    <Chart next6days={next6days} />
+                  </div>
                 </div>
-                <div className="w-full sm:max-w-1/2">
-                  <p className="mb-4 text-center font-bold ">Temperature - Next 6 days (Celsius)</p>
-                  <Chart next6days={next6days} />
+                <div className="w-full flex flex-wrap justify-evenly">
+                  {weatherData.list.slice(1).map((day) => {
+                    return <ForecastStats day={day} key={day.dt} />;
+                  })}
                 </div>
               </div>
             ) : (
-              <p>Insert a city name and get the weather</p>
+              <p className="text-center">Insert a city name and get the weather</p>
             )}
           </div>
         </div>

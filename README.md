@@ -2,7 +2,7 @@
 
 <img src="./Weather Forecast App - Cover.png" alt="Screenshot Weather Forecast App" />
 
-<a href="https://codementor-weather-app.herokuapp.com/" target="_blank">Live demo</a>.
+<a href="https://weather-app.ascpenteado.vercel.app/" target="_blank">Live demo</a>.
 
 This is a <a href="https://www.codementor.io/projects/weather-forecast-website-atx32lz7zb" target="_blank">codementor project</a>.
 
