@@ -7,7 +7,7 @@ function ForecastStats({ day }) {
         <img
           alt={day.weather[0].description}
           title={day.weather[0].description}
-          src={`http://openweathermap.org/img/wn/${day.weather[0].icon}.png`}
+          src={`https://openweathermap.org/img/wn/${day.weather[0].icon}.png`}
         />
         <p className="text-center">{day.newDate.toLocaleString(DateTime.DATE_SHORT)}</p>
       </div>

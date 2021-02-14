@@ -13,7 +13,7 @@ function Stats({ weatherData }) {
           <img
             alt={weatherData.list[0].weather[0].description}
             title={weatherData.list[0].weather[0].description}
-            src={`http://openweathermap.org/img/wn/${weatherData.list[0].weather[0].icon}@2x.png`}
+            src={`https://openweathermap.org/img/wn/${weatherData.list[0].weather[0].icon}@2x.png`}
           />
           <div className="ml-8">
             <h3 className="text-4xl">{Math.round(weatherData.list[0].temp.day)}º</h3>

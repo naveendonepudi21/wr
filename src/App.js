@@ -108,7 +108,7 @@ function App() {
       <div className="flex justify-center items-center w-screen sm:h-screen mt-4 sm:mt-0 bg-gray-100">
         <div className="bg-blue-300 w-11/12 sm:w-4/5 xl:w-3/5 p-2 sm:p-4 rounded-lg">
           <div className="bg-white p-3 rounded text-gray-500">
-            <h1 className="text-2xl text-center font-bold mb-6 text-blue-700">Weather Forescast</h1>
+            <h1 className="text-2xl text-center font-bold mb-6 text-blue-700">Weather Forecast</h1>
             <Header getDataWithName={getDataWithName} cityName={cityName} setCityName={setCityName} />
             {weatherData ? (
               <div>
