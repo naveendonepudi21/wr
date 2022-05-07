@@ -118,7 +118,7 @@ function App() {
                   </div>
                   <div className="w-full sm:max-w-1/2">
                     <p className="mb-4 text-center font-bold">Temperature - Next 6 days (Celsius)</p>
-                    <Chart next6days={next6days} />
+                    <Chart next7days={next7days} />
                   </div>
                 </div>
                 <div className="w-full flex flex-wrap justify-evenly">
