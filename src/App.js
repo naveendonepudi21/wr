@@ -14,7 +14,7 @@ function App() {
 
   const [weatherData, setWeatherData] = useState("");
   const [cityName, setCityName] = useState("");
-  const [next7days, setNext7days] = useState({ temps: [], days: [] });
+  const [next6days, setNext6days] = useState({ temps: [], days: [] });
 
   const handleWeatherData = (data) => {
     const daysData = data.list.map((day) => {
@@ -44,7 +44,7 @@ function App() {
 
     setWeatherData(data);
     setCityName(data.city.name);
-    setNext7days(forecast);
+    setNext6days(forecast);
   };
 
   const getDataWithName = async (cityName) => {
@@ -117,8 +117,8 @@ function App() {
                     <Stats weatherData={weatherData} />
                   </div>
                   <div className="w-full sm:max-w-1/2">
-                    <p className="mb-4 text-center font-bold">Temperature - Next 7 days (Celsius)</p>
-                    <Chart next7days={next7days} />
+                    <p className="mb-4 text-center font-bold">Temperature - Next 6 days (Celsius)</p>
+                    <Chart next6days={next6days} />
                   </div>
                 </div>
                 <div className="w-full flex flex-wrap justify-evenly">
