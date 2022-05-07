@@ -14,7 +14,7 @@ function App() {
 
   const [weatherData, setWeatherData] = useState("");
   const [cityName, setCityName] = useState("");
-  const [next6days, setNext6days] = useState({ temps: [], days: [] });
+  const [next7days, setNext7days] = useState({ temps: [], days: [] });
 
   const handleWeatherData = (data) => {
     const daysData = data.list.map((day) => {
@@ -44,7 +44,7 @@ function App() {
 
     setWeatherData(data);
     setCityName(data.city.name);
-    setNext6days(forecast);
+    setNext7days(forecast);
   };
 
   const getDataWithName = async (cityName) => {
