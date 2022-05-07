@@ -1,8 +1,8 @@
 import { Line } from "@reactchartjs/react-chart.js";
 
-function Chart({ next6days }) {
+function Chart({ next7days }) {
   const chartData = {
-    labels: next6days.days,
+    labels: next7days.days,
     datasets: [
       {
         label: "Temperature",
@@ -11,7 +11,7 @@ function Chart({ next6days }) {
         borderWidth: 1,
         hoverBackgroundColor: "rgba(255,99,132,0.4)",
         hoverBorderColor: "rgba(255,99,132,1)",
-        data: next6days.temps,
+        data: next7days.temps,
       },
     ],
   };
