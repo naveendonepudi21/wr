@@ -117,7 +117,7 @@ function App() {
                     <Stats weatherData={weatherData} />
                   </div>
                   <div className="w-full sm:max-w-1/2">
-                    <p className="mb-4 text-center font-bold">Temperature - Next 6 days (Celsius)</p>
+                    <p className="mb-4 text-center font-bold">Temperature - Next 7 days (Celsius)</p>
                     <Chart next6days={next6days} />
                   </div>
                 </div>
